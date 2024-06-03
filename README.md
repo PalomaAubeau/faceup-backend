@@ -17,20 +17,49 @@ Node.js
 Expo CLI 
 A Cloudinary account
 
-## Installation
-1. Clone backend and frontend repository:
-2. Configure the environment variables for Cloudinary:
-Create a .env file at the root of your project and add your Cloudinary information:\
+### Installation Steps
+### 1. Clone repositories into  separated folders:
+
+BACKEND:
+```
+https://github.com/PalomaAubeau/faceup-backend.git
+```
+FRONTEND:
+```
+https://github.com/PalomaAubeau/faceup-frontend.git
+```
+Open two terminals to retrieve the backend and frontend parts in parallel.
+### 2. Install dependencies for both frontend and backend:
+
+```
+cd backend
+npm (or yarn) install
+```
+```
+cd ../frontend
+npm (or yarn) install
+```
+
+### 3. Configure environment variables:
+Create a .env file in the backend folder.
+Add your required keys and configurations.
 Example:
 ```
 CLOUDINARY_URL=cloudinary://your_api_key
 ```
-
-bash
-Copier le code
-expo start
-Usage
-Open the app on your simulator or mobile device.
+### 4. Start the application:
+Backend (you can use npm or yarn):
+```
+cd backend
+yarn start (or nodemon)
+```
+Frontend (you can use npm or yarn):
+```
+cd frontend
+yarn start
+```
+Open the Expo Go app on your mobile device and scan the QR code displayed in the terminal or in the Expo Dev Tools in your browser.
+The app will be bundled and loaded on your device for testing and development.
 Tap the capture button to take a photo.
 View your photos in the integrated gallery.
 All photos are automatically uploaded and stored on Cloudinary.
